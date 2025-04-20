@@ -57,7 +57,7 @@ for (let i = 1; number >= i; i++) {
 let chessBoard = ""
 let odd = true;
 
-for (let i = 0; i <= 8 * 8; i++) {
+for (let i = 0; i < 8 * 8; i++) {
   // if (i % 8 == 0 && i !== 0) {
   //   chessBoard += "\n"
   //   console.log("woooo")
@@ -65,14 +65,14 @@ for (let i = 0; i <= 8 * 8; i++) {
 
   if (odd) {
     if (i % 8 == 0 && i !== 0) {
-    chessBoard += "\n "
+    chessBoard += "\n"
   } else {
-    chessBoard += " ";
+    chessBoard += "_";
     odd = false;
   }
   } else {
     if (i % 8 == 0 && i !== 0) {
-      chessBoard += "\n#"
+      chessBoard += "\n"
     } else {
       chessBoard += "#";
       odd = true;
