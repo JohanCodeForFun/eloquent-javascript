@@ -55,9 +55,10 @@ for (let i = 1; number >= i; i++) {
 // Chess
 
 let chessBoard = ""
+const boardSize = 16;
 
-for (let row = 0; row < 8; row++) {
-  for (let col = 0; col < 8; col++) {
+for (let row = 0; row < boardSize; row++) {
+  for (let col = 0; col < boardSize; col++) {
     if ((row + col) % 2 === 0) {
       chessBoard += " ";
     } else {
