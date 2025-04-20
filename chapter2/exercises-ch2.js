@@ -67,17 +67,19 @@ console.log("------ Chessboard ------\n")
 // Chess
 
 let chessBoard = ""
+// Represents the dimensions of a square chessboard (e.g., 16x16)
 const boardSize = 16;
 
 for (let row = 0; row < boardSize; row++) {
   for (let col = 0; col < boardSize; col++) {
+    // Determine whether the current cell is a "white" square (even sum) or "black" square (odd sum)
     if ((row + col) % 2 === 0) {
       chessBoard += " ";
     } else {
       chessBoard += "#";
     }
   }
-  chessBoard += "\n"
+  chessBoard += "\n";
 }
 
-console.log(chessBoard)
+console.log("Generated Chessboard:\n" + chessBoard);
