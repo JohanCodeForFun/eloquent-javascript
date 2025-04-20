@@ -36,6 +36,7 @@ numbers both divisilb by 3 & 5, print "FizzBuzz"
 
 let number = 100;
 
+/*
 for (let i = 1; number >= i; i++) {
   if ((i % 3 == 0) && (i % 5 == 0)) {
     console.log("FizzBuzz")
@@ -49,4 +50,34 @@ for (let i = 1; number >= i; i++) {
   }
 }
 
+*/
 
+// Chess
+
+let chessBoard = ""
+let odd = true;
+
+for (let i = 0; i <= 8 * 8; i++) {
+  // if (i % 8 == 0 && i !== 0) {
+  //   chessBoard += "\n"
+  //   console.log("woooo")
+  // }
+
+  if (odd) {
+    if (i % 8 == 0 && i !== 0) {
+    chessBoard += "\n "
+  } else {
+    chessBoard += " ";
+    odd = false;
+  }
+  } else {
+    if (i % 8 == 0 && i !== 0) {
+      chessBoard += "\n#"
+    } else {
+      chessBoard += "#";
+      odd = true;
+    }
+  }
+}
+
+console.log(chessBoard)
