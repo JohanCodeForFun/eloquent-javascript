@@ -17,7 +17,10 @@ Exercises:
 */
 
 const calls = 7;
+let string = "";
 
 for (let i = 1; i <= calls; i++) {
-  console.log("#", i)
+  string += "#"
+  
+  console.log(string)
 }
