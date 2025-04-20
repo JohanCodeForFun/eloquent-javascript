@@ -55,29 +55,16 @@ for (let i = 1; number >= i; i++) {
 // Chess
 
 let chessBoard = ""
-let odd = true;
 
-for (let i = 0; i < 8 * 8; i++) {
-  // if (i % 8 == 0 && i !== 0) {
-  //   chessBoard += "\n"
-  //   console.log("woooo")
-  // }
-
-  if (odd) {
-    if (i % 8 == 0 && i !== 0) {
-    chessBoard += "\n"
-  } else {
-    chessBoard += "_";
-    odd = false;
-  }
-  } else {
-    if (i % 8 == 0 && i !== 0) {
-      chessBoard += "\n"
+for (let row = 0; row < 8; row++) {
+  for (let col = 0; col < 8; col++) {
+    if ((row + col) % 2 === 0) {
+      chessBoard += " ";
     } else {
       chessBoard += "#";
-      odd = true;
     }
   }
+  chessBoard += "\n"
 }
 
 console.log(chessBoard)
